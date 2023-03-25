@@ -1,6 +1,6 @@
 
 .first-header{
-    height: 95vh;
+    height: 100vh;
     background-image: linear-gradient(to right,#14eb31b2,#51e60c7e),url("../../assets/hero-small.jpg");
     background-size: cover;
     background-position:  top;
@@ -20,20 +20,84 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
+    text-align: center;
 }
 .text-box{
     color: white;
     text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 50px;
 }
 .main-heading{
     display: block;
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
 }
 .sub-heading{
     display: block;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 17px;
+    animation: moveInRight 1s ease-in ;
+}
+.btn-white{
+    text-transform: uppercase;
+    background-color: #fff;
+    color: gray;
+    padding: 15px 40px;
+    display: inline-block;
+    border: none;
+    border-radius: 100px;
+    transition: all .2s;
+    animation: moveInBottom 1s ease-in;
+}
+.btn-white:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+.btn-white:active{
+    transform: translateY(-1px);
+}
+/* animations part */
+
+@keyframes moveInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+   
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
 }
