@@ -15,7 +15,7 @@ export default function FirstPage() {
             <span className="main-heading">OUTDOORS</span>
             <span className="sub-heading">is where life happens</span>
           </div>
-          <button className="btn-white"> Discover More</button>
+          <button className="btn-white btn-animation"> Discover More</button>
         </div>
       </div>
     </div>

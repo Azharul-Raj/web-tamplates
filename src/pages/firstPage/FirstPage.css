@@ -53,7 +53,10 @@
     border: none;
     border-radius: 100px;
     transition: all .2s;
-    animation: moveInBottom 1s ease-in;
+}
+.btn-animation{
+    animation: moveInBottom 1s linear .75s;
+    animation-fill-mode: backwards;
 }
 .btn-white:hover{
     transform: translateY(-2px);
@@ -98,6 +101,6 @@
    
     100%{
         opacity: 1;
-        transform: translate(0);
+        transform: translateY(0);
     }
 }
