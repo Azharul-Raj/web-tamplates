@@ -1,12 +1,12 @@
-import "./FirstPage.css"
+import "./FirstPage.scss"
 import logo from "../../assets/logo-white.png";
 export default function FirstPage() {
   return (
     <div className="">
-      <div className="first-header">
+      <div className="header">
         {/* logo */}
-        <div className="logo-box">
-          <img className="logo" src={logo} alt="" />
+        <div className="header__logo-box">
+          <img className="header__logo" src={logo} alt="" />
         </div>
 
         {/* main body */}
