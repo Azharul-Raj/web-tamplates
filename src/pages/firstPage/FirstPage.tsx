@@ -10,12 +10,12 @@ export default function FirstPage() {
         </div>
 
         {/* main body */}
-        <div className="main-box">
+        <div className="header__main-box">
           <div className="text-box">
-            <span className="main-heading">OUTDOORS</span>
-            <span className="sub-heading">is where life happens</span>
+            <span className="text-box__heading">OUTDOORS</span>
+            <span className="text-box__sub-heading">is where life happens</span>
           </div>
-          <button className="btn-white btn-animation"> Discover More</button>
+          <button className="btn btn__animation"> Discover More</button>
         </div>
       </div>
     </div>

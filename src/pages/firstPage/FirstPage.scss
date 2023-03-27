@@ -15,40 +15,40 @@ $white-color:#ffffff;
     &__logo{
         height: 3.5rem;
     }
-
+    &__main-box{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
 }
 
 
-.main-box{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
+
 .text-box{
     color: $white-color;
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 5rem;
+    &__heading{
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+    }
+    &__sub-heading{
+        display: block;
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: 1.7rem;
+        animation: moveInRight 1s ease-in ;
+    }
 }
-.main-heading{
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-}
-.sub-heading{
-    display: block;
-    font-size: 2rem;
-    font-weight: 500;
-    letter-spacing: 1.7rem;
-    animation: moveInRight 1s ease-in ;
-}
-.btn-white{
+.btn{
     text-transform: uppercase;
     background-color: $white-color;
     color: gray;
@@ -58,18 +58,21 @@ $white-color:#ffffff;
     border-radius: 10rem;
     transition: all .2s;
     outline: none;
+    &__animation{
+        animation: moveInBottom 1s linear .75s;
+        animation-fill-mode: backwards;
+    }
+    &:hover{
+        transform: translateY(-.2rem);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    }
+    &:active{
+        transform: translateY(-1px);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    }
 }
-.btn-animation{
-    animation: moveInBottom 1s linear .75s;
-    animation-fill-mode: backwards;
-}
-.btn-white:hover{
-    transform: translateY(-.2rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
-}
-.btn-white:active{
-    transform: translateY(-1px);
-}
+
+
 /* animations part */
 
 @keyframes moveInLeft {
